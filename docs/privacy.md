@@ -1,6 +1,12 @@
 # Privacy and data flow
 
-You operate the Hub and execution Node and choose the model provider. XVIS does not ship a maintainer endpoint, shared API key, analytics account or hosted backend. A fresh App has no configured connection.
+You operate the Hub and execution Node and configure supported model access. XVIS does not ship a maintainer endpoint, shared API key, analytics account or hosted backend. A fresh App has no configured connection. Execution currently uses pinned DSH; Host explicitly selects `deepseek-official / deepseek-flash`. Provider independence is a design goal, not a claim of arbitrary model compatibility.
+
+## 数据自持与本地存储
+
+XVIS 起于作者希望在模型账号或云端应用不可用后仍能保有自己的资料。“自持”指使用者掌握存储与管理权；当前 Hub 可以部署在云服务器，不能据此声称所有资料均已位于本地电脑。完整本地档案、通用导出导入和自动备份恢复仍在计划中，见 [产品思路](product.md) 和 [路线图](roadmap.md)。
+
+持久记录、手机缓存、原始档案与精选记忆具有不同范围。删除设置中的资料不等于删除所有历史副本，保存了当前缓存也不等于已完成备份。模型服务失效不会自动删除自有存储中的记录，但资料能否持续访问仍取决于自己的存储、备份和恢复安排。
 
 | Data | Where it is stored or sent |
 |---|---|

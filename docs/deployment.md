@@ -65,6 +65,8 @@ Replace every `/absolute/path/to/xvis` in the Node template with the actual chec
 
 Configure your own model access using `DEEPSEEK_API_KEY` / the pinned DSH's documented configuration. Keep credentials out of the repository and use a fresh `dsh_home` independent of `~/.dsh`. The Node does not copy credentials from the App or a desktop DSH session.
 
+Model access configuration does not imply arbitrary provider support. Headless uses its independent DSH configuration; the current Host adapter explicitly selects `deepseek-official / deepseek-flash`. Replacing a provider or execution engine requires separate compatibility work and validation.
+
 ```sh
 .venv/bin/python scripts/start_node.py --config node/config.local.yaml
 ```
@@ -80,3 +82,9 @@ Build according to [ios/README.md](../ios/README.md), then enter your HTTPS endp
 For an additional node, `python scripts/pair_node.py --help` lists explicit runtime/workspace inputs. The CLI creates a short-lived link and, on macOS, a QR image. Confirm the device name/fingerprint in App Settings. The CLI writes a new mode-600 config but does not start the node. Never reuse one node's identity on another running machine.
 
 APNs is optional and disabled by default. The current provider supports certificate/key authentication; `.p8` JWT authentication is not implemented. Match certificate environment and topic to the signed App. Ordinary task history remains usable without push delivery.
+
+## 5. Data ownership and recovery scope
+
+The Hub database and attachments are authoritative records on the server you operate, which may be a cloud server. Node journals, DSH homes and workspace files live on the execution device. App caches and the source Git repository are not full backups of these records.
+
+The Linux installer creates an upgrade-time database backup and preserves service rollback information. This is not a complete recovery package for attachments, Node state, DSH sessions and workspaces. Operators still need to manage those backups consistently and protect credentials separately. General export/import, automated local or off-site archives and full clean-environment recovery drills remain [planned work](roadmap.md); they are not installed by this guide.

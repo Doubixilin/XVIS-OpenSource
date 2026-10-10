@@ -59,3 +59,11 @@ The expanded [README](../README.md), [product explanation](product.md), [design 
 - Public-tree checks and Git whitespace checks passed. This update changes documentation and screenshots only, so the business and iOS suites were not repeated; the source CI evidence above remains the applicable baseline.
 
 The gallery demonstrates the actual App UI, not real DSH execution of the displayed tasks. It does not establish physical-device, camera, cellular, haptic or APNs acceptance.
+
+## Origin and decoupling clarification — 2026-10-10
+
+The introduction now records the author's account-loss experience and the original goal of keeping core records independent of a model account or cloud application. Product, architecture, progress, roadmap, FAQ, privacy and deployment notes distinguish current self-managed storage from planned portable archives, local copies, model replacement and complete backup/recovery.
+
+Current implementation boundaries were checked against the Hub task store, Node journal, pinned-runtime configuration, Host model selection and Linux installer's database-backup/rollback path. The new product diagram depicts a design goal, not shipped migration functionality. The documentation set now contains 11 Mermaid diagrams.
+
+This is a documentation-only update. Local links, public-tree/whitespace checks and Mermaid syntax validation were repeated; business and iOS suites were not rerun. No model provider, backup service, deployment or execution mode was changed, and no full disaster-recovery acceptance is claimed.
