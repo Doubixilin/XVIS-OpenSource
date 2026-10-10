@@ -38,4 +38,13 @@ Upstream integration has previously been exercised for question/approval/resume,
 - The 32-file Hub release was extracted into an independent temporary directory. Manifest hashes, import location, startup, health and authenticated/unauthenticated requests passed. Archive ownership metadata contains no builder account name.
 - Public file-path/content checks, local documentation links, shell syntax and Xcode property-list checks passed. These checks are not an independent security audit.
 
-The GitHub Actions workflow is provided but has not yet run on hosted runners. This source snapshot has not been deployed to a production Hub or installed on a physical iPhone, and it did not repeat paid real-DSH integration or real APNs delivery tests.
+This source snapshot has not been deployed to a production Hub or installed on a physical iPhone, and it did not repeat paid real-DSH integration or real APNs delivery tests.
+
+## Hosted CI — 2026-10-10
+
+[GitHub Actions run 38022818930](https://github.com/Doubixilin/XVIS-OpenSource/actions/runs/38022818930) passed for source commit `a316d5aff87f1a7a77e745afe88ffb8bfea32141`:
+
+- Ubuntu: public-tree checks, offline parser fixtures and all **212** Hub/Node regression test invocations passed.
+- macOS with Xcode 26.6: signed iOS simulator XCTest passed **95/95**, with zero failures.
+
+The follow-up documentation commit records this result without changing the tested source or workflow.
