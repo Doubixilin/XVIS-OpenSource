@@ -1,0 +1,78 @@
+{
+  "_comment": "D0 固定脱敏样例期望表。所有样例为人工构造或真实捕获后脱敏（路径替换为 /Users/validator/...，request_id 固定为全零 UUID，key 保持上游自带的 **** 掩码）。final-overlong 与 run-eof-midline 由脚本专项断言，不在此表内。",
+  "fixtures": {
+    "run-success.ndjson": {
+      "exit_code": 0,
+      "status": "done",
+      "session_id": "session-3f2a1b6c-1111-4a2b-9c3d-0123456789ab",
+      "final_contains": "好的"
+    },
+    "run-tool-call.ndjson": {
+      "exit_code": 0,
+      "status": "done",
+      "session_id": "session-7c1d2e3f-2222-4b3c-8d4e-0123456789cd",
+      "final_contains": "已创建"
+    },
+    "run-auth-error.ndjson": {
+      "exit_code": 1,
+      "status": "failed"
+    },
+    "run-cancel-sigterm.ndjson": {
+      "exit_code": 0,
+      "cancel_requested": true,
+      "survivors": 0,
+      "status": "cancelled"
+    },
+    "run-cancel-survivor.ndjson": {
+      "exit_code": 0,
+      "cancel_requested": true,
+      "survivors": 1,
+      "status": "interrupted"
+    },
+    "run-cancel-unknown-exit.ndjson": {
+      "exit_code": null,
+      "cancel_requested": true,
+      "survivors": 0,
+      "status": "interrupted"
+    },
+    "run-final-missing-text.ndjson": {
+      "exit_code": 0,
+      "status": "failed"
+    },
+    "run-final-object-text.ndjson": {
+      "exit_code": 0,
+      "status": "failed"
+    },
+    "run-unknown-session.ndjson": {
+      "exit_code": 1,
+      "status": "failed",
+      "expect_error_message_contains": "does not exist"
+    },
+    "run-wrong-cwd.ndjson": {
+      "exit_code": 1,
+      "status": "failed",
+      "expect_error_message_contains": "was recorded in"
+    },
+    "run-tool-denied-outside.ndjson": {
+      "exit_code": 0,
+      "status": "done",
+      "final_contains": "拒绝"
+    },
+    "run-escalation-denied.ndjson": {
+      "exit_code": 0,
+      "status": "done",
+      "final_contains": "fail-closed"
+    },
+    "run-bash-denied-outside.ndjson": {
+      "exit_code": 0,
+      "status": "done",
+      "final_contains": "Operation not permitted"
+    },
+    "run-unknown-events.ndjson": {
+      "exit_code": 0,
+      "status": "done",
+      "truncated_events": 1,
+      "final_contains": "未知事件"
+    }
+  }
+}

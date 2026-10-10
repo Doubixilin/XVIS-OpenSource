@@ -1,0 +1,4 @@
+{"type":"session","sessionId":"session-f6a7b8c9-8888-4d04-f5a6-0123456789dd","cwd":"/Users/validator/work/proj"}
+{"type":"status","phase":"turn_start","turn":1}
+{"type":"status","phase":"turn_end","turn":1,"reason":{"kind":"completed"}}
+{"type":"final"}

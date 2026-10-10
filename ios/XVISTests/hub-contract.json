@@ -1,0 +1,122 @@
+{
+  "source": "temporary loopback Hub with fake node",
+  "nodes": {
+    "nodes": [
+      {
+        "node_id": "mac-a",
+        "name": "测试 Mac",
+        "online": true,
+        "last_seen": "2026-10-07T13:51:36.762+00:00",
+        "busy": false
+      },
+      {
+        "node_id": "mac-b",
+        "name": "mac-b",
+        "online": false,
+        "last_seen": null,
+        "busy": false
+      }
+    ]
+  },
+  "projects": {
+    "projects": [
+      {
+        "project_id": "p-accept",
+        "name": "p-accept",
+        "node_id": "mac-a",
+        "available": true
+      }
+    ]
+  },
+  "tasks": {
+    "tasks": [
+      {
+        "task_id": "t-a66e65887e95813c76e9a915",
+        "status": "done",
+        "node_id": "mac-a",
+        "project_id": "p-accept",
+        "created_at": "2026-10-07T13:51:36.686+00:00",
+        "started_at": "2026-10-07T13:51:36.716+00:00",
+        "finished_at": "2026-10-07T13:51:36.751+00:00",
+        "result": {
+          "final_text": "中文兼容性验收完成",
+          "truncated": false
+        },
+        "error": null,
+        "can_followup": true,
+        "followup_task_id": null,
+        "is_followup_of": null
+      }
+    ],
+    "next_cursor": null
+  },
+  "detail": {
+    "task_id": "t-a66e65887e95813c76e9a915",
+    "status": "done",
+    "node_id": "mac-a",
+    "project_id": "p-accept",
+    "created_at": "2026-10-07T13:51:36.686+00:00",
+    "started_at": "2026-10-07T13:51:36.716+00:00",
+    "finished_at": "2026-10-07T13:51:36.751+00:00",
+    "result": {
+      "final_text": "中文兼容性验收完成",
+      "truncated": false
+    },
+    "error": null,
+    "can_followup": true,
+    "followup_task_id": null,
+    "is_followup_of": null
+  },
+  "events": {
+    "events": [
+      {
+        "id": 1,
+        "task_id": "t-a66e65887e95813c76e9a915",
+        "type": "task_status",
+        "payload": {
+          "status": "queued"
+        },
+        "created_at": "2026-10-07T13:51:36.686+00:00"
+      },
+      {
+        "id": 2,
+        "task_id": "t-a66e65887e95813c76e9a915",
+        "type": "task_status",
+        "payload": {
+          "status": "assigned"
+        },
+        "created_at": "2026-10-07T13:51:36.686+00:00"
+      },
+      {
+        "id": 3,
+        "task_id": "t-a66e65887e95813c76e9a915",
+        "type": "task_status",
+        "payload": {
+          "status": "running"
+        },
+        "created_at": "2026-10-07T13:51:36.716+00:00"
+      },
+      {
+        "id": 4,
+        "task_id": "t-a66e65887e95813c76e9a915",
+        "type": "final_chunk",
+        "payload": {
+          "seq_end": true,
+          "text": "中文兼容性验收完成"
+        },
+        "created_at": "2026-10-07T13:51:36.740+00:00"
+      },
+      {
+        "id": 5,
+        "task_id": "t-a66e65887e95813c76e9a915",
+        "type": "task_status",
+        "payload": {
+          "status": "done"
+        },
+        "created_at": "2026-10-07T13:51:36.752+00:00"
+      }
+    ],
+    "next_after": 5,
+    "has_more": false
+  }
+}

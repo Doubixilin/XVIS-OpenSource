@@ -1,0 +1,6 @@
+{"type":"session","sessionId":"session-99c8eae4-9652-4e6d-8bf4-82c48ef93c89","cwd":"/Users/validator/work/proj"}
+{"type":"status","phase":"turn_start","turn":1}
+{"type":"status","phase":"step_start","turn":1,"step":1}
+{"type":"status","phase":"step_end","turn":1,"step":1}
+{"type":"status","phase":"turn_end","turn":1,"reason":{"kind":"error","error":{"message":"Authentication Fails, Your api key: ****95ac is invalid (request_id: 00000000-0000-4000-8000-000000000000)","code":"AUTH","status":401}}}
+{"type":"final","text":""}

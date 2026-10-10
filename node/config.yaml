@@ -1,0 +1,14 @@
+# DSH 单引擎节点模板：复制为 config.local.yaml，权限设置为 600。
+# 模板不允许直接启动；node_token 也可通过 XVIS_NODE_TOKEN 注入。
+hub_ws_url: wss://example.com/xvis/ws/node
+node_token: ""
+node_bin: /absolute/path/to/xvis/local_private/dsh-validation/node-runtime/bin/node
+dsh_cli: /absolute/path/to/xvis/local_private/dsh-validation/runtime/node_modules/@deepseek-ai/dsh/lib/bin.js
+dsh_home: /absolute/path/to/xvis/local_private/dsh-node/home
+journal_path: /absolute/path/to/xvis/local_private/dsh-node/journal.sqlite
+log_dir: /absolute/path/to/xvis/local_private/dsh-node/runs
+default_timeout_sec: 1800
+projects:
+  - project_id: p-xvis-test
+    name: 测试工作区
+    path: /absolute/path/to/xvis/local_private/workspace

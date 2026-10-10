@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+    <key>NSCameraUsageDescription</key>
+    <string>扫描你要连接的设备所显示的短时配对二维码。</string>
+    <key>XVIS_APNS_ENVIRONMENT</key>
+    <string>$(XVIS_APNS_ENVIRONMENT)</string>
+</dict>
+</plist>

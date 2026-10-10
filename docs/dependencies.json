@@ -1,0 +1,115 @@
+{
+  "source": "Installed distribution metadata for the pinned Python runtime; packages are installed separately.",
+  "packages": [
+    {
+      "package": "annotated-doc",
+      "version": "0.0.5",
+      "license_metadata": "MIT"
+    },
+    {
+      "package": "annotated-types",
+      "version": "0.8.0",
+      "license_metadata": "MIT"
+    },
+    {
+      "package": "anyio",
+      "version": "4.15.1",
+      "license_metadata": "MIT"
+    },
+    {
+      "package": "certifi",
+      "version": "2026.7.22",
+      "license_metadata": "MPL-2.0"
+    },
+    {
+      "package": "click",
+      "version": "8.5.0",
+      "license_metadata": "BSD-3-Clause"
+    },
+    {
+      "package": "fastapi",
+      "version": "0.142.2",
+      "license_metadata": "MIT"
+    },
+    {
+      "package": "h11",
+      "version": "0.16.0",
+      "license_metadata": "MIT"
+    },
+    {
+      "package": "h2",
+      "version": "4.3.0",
+      "license_metadata": "MIT License"
+    },
+    {
+      "package": "hpack",
+      "version": "4.1.0",
+      "license_metadata": "MIT License"
+    },
+    {
+      "package": "httpcore",
+      "version": "1.0.9",
+      "license_metadata": "BSD-3-Clause"
+    },
+    {
+      "package": "httpx",
+      "version": "0.28.1",
+      "license_metadata": "BSD-3-Clause"
+    },
+    {
+      "package": "hyperframe",
+      "version": "6.1.0",
+      "license_metadata": "MIT License"
+    },
+    {
+      "package": "idna",
+      "version": "3.20",
+      "license_metadata": "BSD-3-Clause"
+    },
+    {
+      "package": "opentelemetry-api",
+      "version": "1.45.1",
+      "license_metadata": "Apache-2.0"
+    },
+    {
+      "package": "pydantic",
+      "version": "2.13.5",
+      "license_metadata": "MIT"
+    },
+    {
+      "package": "pydantic-core",
+      "version": "2.46.5",
+      "license_metadata": "MIT"
+    },
+    {
+      "package": "pyyaml",
+      "version": "6.0.3",
+      "license_metadata": "MIT"
+    },
+    {
+      "package": "starlette",
+      "version": "1.7.0",
+      "license_metadata": "BSD-3-Clause"
+    },
+    {
+      "package": "typing-extensions",
+      "version": "4.16.0",
+      "license_metadata": "PSF-2.0"
+    },
+    {
+      "package": "typing-inspection",
+      "version": "0.4.4",
+      "license_metadata": "MIT"
+    },
+    {
+      "package": "uvicorn",
+      "version": "0.54.0",
+      "license_metadata": "BSD-3-Clause"
+    },
+    {
+      "package": "websockets",
+      "version": "17.2",
+      "license_metadata": "BSD-3-Clause"
+    }
+  ]
+}

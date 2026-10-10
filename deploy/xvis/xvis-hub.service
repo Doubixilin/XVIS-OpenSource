@@ -1,0 +1,24 @@
+[Unit]
+Description=XVIS DSH task hub
+After=network-online.target
+Wants=network-online.target
+
+[Service]
+Type=simple
+User=xvis
+Group=xvis
+WorkingDirectory=/opt/xvis/current
+EnvironmentFile=/etc/xvis/hub.env
+ExecStart=/opt/xvis/current/.venv/bin/python /opt/xvis/current/scripts/start_hub.py --config /etc/xvis/hub.yaml
+Restart=on-failure
+RestartSec=3
+TimeoutStopSec=20
+UMask=0077
+NoNewPrivileges=true
+PrivateTmp=true
+ProtectSystem=strict
+ProtectHome=true
+ReadWritePaths=/var/lib/xvis
+
+[Install]
+WantedBy=multi-user.target

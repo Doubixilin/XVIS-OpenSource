@@ -1,0 +1,17 @@
+host: 127.0.0.1
+port: 18300
+root_path: /xvis
+db_path: /var/lib/xvis/hub.db
+app_token: ${XVIS_APP_TOKEN}
+node_tokens:
+  mac-a: ${XVIS_NODE_TOKEN}
+node_names:
+  mac-a: 我的 Mac
+# 未配置时，普通任务与结果收件箱完整可用。真实 APNs 另行交付验证。
+apns:
+  enabled: false
+  # 启用前明确固定为 sandbox 或 production，并核对 App 签名环境。
+  # environment: sandbox
+  # topic: com.example.XVIS
+  # certfile: /etc/xvis/private/apns-cert.pem
+  # keyfile: /etc/xvis/private/apns-key.pem

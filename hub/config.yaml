@@ -1,0 +1,15 @@
+# DSH v1 中枢，秘密由环境或 gitignored 本地配置提供。
+host: 127.0.0.1
+port: 18300
+root_path: ""  # 经 /xvis/ 反代部署时设为 /xvis
+db_path: hub/data/dsh-hub.db
+app_token: "${XVIS_APP_TOKEN}"
+node_tokens:
+  mac-a: "${XVIS_NODE_TOKEN}"
+node_names:
+  mac-a: "我的 Mac"
+log_level: INFO
+node_heartbeat_timeout_sec: 45
+node_scan_interval_sec: 5
+default_timeout_sec: 1800
+task_create_per_minute: 30

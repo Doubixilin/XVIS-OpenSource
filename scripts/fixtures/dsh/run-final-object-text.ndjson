@@ -1,0 +1,4 @@
+{"type":"session","sessionId":"session-a7b8c9d0-9999-4e15-a6b7-0123456789ee","cwd":"/Users/validator/work/proj"}
+{"type":"status","phase":"turn_start","turn":1}
+{"type":"status","phase":"turn_end","turn":1,"reason":{"kind":"completed"}}
+{"type":"final","text":{"oops":"text 不应是对象"}}

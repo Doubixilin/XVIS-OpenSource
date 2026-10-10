@@ -1,0 +1,4 @@
+{"type": "session", "sessionId": "session-d4e5f6a7-6666-4b82-d3e4-0123456789bb", "cwd": "/Users/validator/work/proj"}
+{"type": "status", "phase": "turn_start", "turn": 1}
+{"type": "status", "phase": "turn_end", "turn": 1, "reason": "completed"}
+{"type":"final","text":"传输在这里被掐

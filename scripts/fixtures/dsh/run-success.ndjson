@@ -1,0 +1,8 @@
+{"type": "session", "sessionId": "session-3f2a1b6c-1111-4a2b-9c3d-0123456789ab", "cwd": "/Users/validator/work/proj"}
+{"type": "status", "phase": "turn_start", "turn": 1}
+{"type": "status", "phase": "step_start", "turn": 1, "step": 1}
+{"type": "thinking", "text": "用户要求只回复两个字，直接给出即可。"}
+{"type": "text", "text": "好的"}
+{"type": "status", "phase": "step_end", "turn": 1, "step": 1, "usage": {"inputTokens": 210, "outputTokens": 12, "totalTokens": 222, "cacheReadTokens": 0, "cacheWriteTokens": 0, "reasoningTokens": 0}}
+{"type": "status", "phase": "turn_end", "turn": 1, "reason": {"kind": "completed"}}
+{"type": "final", "text": "好的"}
