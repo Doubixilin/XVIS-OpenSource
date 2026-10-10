@@ -1,12 +1,80 @@
-# Roadmap
+# 从结果交付走向持续协作
 
-The project aims to turn ideas into usable results across the owner's documents and devices. Planned work is separate from implemented capability; there are no committed delivery dates.
+[返回首页](../README.md) · [产品思路](product.md) · [当前进展](progress.md)
 
-1. **Daily input:** system sharing into persistent drafts, supported general-file input, a few useful repeatable workflows and source-backed retrieval.
-2. **Project selection:** editable presets of project name, device and absolute directory; directly choose a saved project. Ordinary folders are valid workspaces. Existing tasks stay bound to their original directory.
-3. **Voice conversation:** speech input, spoken replies, multi-turn context, interruption and an editable text record. Provider, interaction style and recording retention remain design decisions.
-4. **Memory:** user-reviewed entries with scope and provenance. Automatic extraction and semantic search require demonstrated need and separate evaluation.
-5. **Device collaboration:** physical second-node validation, desktop handoff, and platform-specific installation and process-control checks.
-6. **Limited follow-up:** explicit recurring goals, inspectable outputs and a clear stop action. No new authority to send or publish is implied by a previous task.
+路线围绕同一个目标展开：围绕自己的资料与设备，持续产出可检查、可使用、可继续的结果。以下是开发方向和完成标准，**没有承诺发布日期**。第三、四阶段可以根据实际需求调整顺序。
 
-Current engineering follow-ups include real APNs delivery, optical QR scanning, remaining physical-device interaction checks and long-running reliability. See [validation](validation.md).
+```mermaid
+flowchart LR
+    R1["R1 结果交付<br/>成果能到手"] --> R2["R2 工作延续<br/>背景能接住"]
+    R2 --> R3["R3 日常流程<br/>常做的事更顺手"]
+    R3 --> R4["R4 设备协作<br/>明确分工与交接"]
+    R4 --> R5["R5 有限主动跟进<br/>按约定继续工作"]
+```
+
+## R1 · 结果交付
+
+**要解决的问题：** 手机发出任务后可以离开，回来时知道做了什么，并能真正拿走成果。
+
+已实现任务主链、图片收发、一般文件返回、未查看结果，以及通知登记和点击路由。文件领取包含鉴权、大小和 SHA-256 检查，损坏可以补传。
+
+剩余重点是实际运行环境中的交付可靠性，尤其是真实 APNs、锁屏后返回、弱网、下载中断和终止请求。推送权限、App 签名、Hub provider 证书与设备网络都需要真实条件；注入通知 payload 不足以关闭这项验收。
+
+## R2 · 工作延续
+
+**要解决的问题：** 同一个项目隔天继续时，目标、约束和已经确定的决定能够保留。
+
+R2-01 已实现按设备／项目隔离的七字段背景、来源记录、摘要候选、明确保存和冲突保稿。全局人格与手动记忆也已具备新会话快照机制。
+
+**R2-02 条目级记忆仍待开发。** 希望为值得长期保存的信息提供明确作用域、来源、编辑和删除方式；先保证用户能看见、理解并修正这些资料。当前设置虽已有手动条目，不等于已经实现这套完整的记忆管理。自动提取、语义检索或向量存储需由真实使用需求和质量评估决定。
+
+完成标准包括：能说明某条资料从哪里来、用于哪些新任务；修改不会污染其他项目；删除效果和旧任务保留范围能够解释清楚。
+
+## R3 · 日常流程
+
+**要解决的问题：** 从其他 App、资料文件、常用项目或语音开始工作时，少走几步。
+
+| 后续事项 | 想要的体验 | 完成标准 |
+| --- | --- | --- |
+| R3-01 系统分享入口 | 从其他 App 把文字、链接等送入 XVIS 草稿 | 支持范围明确；用户核对目标工作区和内容后发送；取消不丢原草稿 |
+| R3-02 一般文件输入 | 选择支持的文档交给执行设备处理 | 冻结类型、数量、体积和内容流转协议；明确解析失败与模型可用内容 |
+| R3-03 少量重复流程 | 对常做的整理、比较、报告工作保留可调整的模板 | 连续多次产出可用结果，能检查来源、修改要求和领取文件 |
+| R3-03 带来源的检索 | 回答与来源能够对应 | 工具与信息来源明确；无法核实时能保留不确定性 |
+| R3-04 项目路径预设 | 保存项目名称、所属设备与目录，直接选择 | 普通文件夹可用；路径存在和权限可检查；旧任务不因预设修改换目录 |
+| R3-05 语音对话 | 说出意图、听取回答、连续追问并随时打断 | 可编辑文字记录；停止和打断有效；服务提供方与录音保留策略明确 |
+
+分享入口也包括围绕最近任务、文字／链接草稿设计 App Intents 快捷动作；直接提交仍需明确项目、鉴权和幂等回执，不绕过原有任务边界。
+
+路径预设需要处理同名项目分属不同设备、目录移动和权限失效。先让选择准确，再考虑自动发现。它不会默认扫描整台设备或把所有目录暴露给执行器。
+
+语音从可用的输入和回听体验逐步推进。实时模型、系统识别、TTS 服务、是否保存录音等仍是待确定的技术选择；目前没有常驻收音或语音自动执行功能。
+
+## R4 · 设备协作
+
+**要解决的问题：** 任务能交给合适设备，复杂工作能够在桌面接上。
+
+配对、独立身份、项目范围和撤销已有实现，两个隔离本地节点已验证。下一步需要真实第二节点的安装、权限、目录、失联与撤销测试，并按实际需求适配 Windows 等平台。
+
+桌面交接需要同时说明任务、文件、会话和上下文怎样延续。把摘要带到另一台设备创建新任务可以是一种新工作流，但不能宣称原 DSH 会话已经完整迁移。任何自动换设备或转移工作目录都需要可见的规则和明确确认。
+
+完成标准包括：用户能辨认目标设备；节点失联不会误投其他项目；身份撤销与进程现状分开显示；平台自己的进程终止和权限行为取得实机证据。
+
+## R5 · 有限主动跟进
+
+**要解决的问题：** 已经稳定的流程，可以在约定时间或条件下再次推进，并返回可检查的成果。
+
+这阶段依赖前面的输入、交付、记忆和设备基础。每项跟进都应有明确目标、触发方式、作用范围、结果入口和停止动作；没有新进展时减少打扰。一次任务的授权不能被扩展为长期自动发送、发布或操作其他业务系统的权限。
+
+当前仍为规划方向，没有发布周期任务或主动监控能力。
+
+## 持续进行的工程工作
+
+| 事项 | 触发条件 | 如何认定完成 |
+| --- | --- | --- |
+| 真实 Apple 推送 | 运营者准备兼容证书／私钥与签名环境 | 实机真实送达、前后台行为和点击路由均有记录 |
+| 光学扫码配对 | 可用相机与配对界面 | 扫描真实二维码、过期／错误码处理通过 |
+| 完整真机交互 | 可用 iPhone 与测试环境 | 图片、文件、键盘、分享、触觉及恢复逐项实操 |
+| 长运行和网络恢复 | 可控的断网、休眠、进程终止环境 | 状态一致、无重复执行、未知情况明确可见 |
+| 依赖升级 | 固定版本缺陷或确切需求 | 先验证 DSH 协议和兼容路径，再升级运行包 |
+
+新协议先冻结兼容约定和样例，再实现各端。完成一项后同时更新 [进展](progress.md) 与 [验证记录](validation.md)，保持计划、源码和验收范围一致。

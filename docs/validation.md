@@ -48,3 +48,14 @@ This source snapshot has not been deployed to a production Hub or installed on a
 - macOS with Xcode 26.6: signed iOS simulator XCTest passed **95/95**, with zero failures.
 
 The follow-up documentation commit records this result without changing the tested source or workflow.
+
+## Documentation and App gallery — 2026-10-10
+
+The expanded [README](../README.md), [product explanation](product.md), [design notes](design.md), [architecture](architecture.md), [workflows](workflows.md), [progress](progress.md), [roadmap](roadmap.md), [FAQ](faq.md) and [references](references.md) document the existing source and distinguish it from planned work.
+
+- The [gallery](gallery.md) adds **11 original simulator screenshots**, including both appearances, Markdown reading, history, approval, queue, file delivery/preview, assistant settings and project context. The App uses the same tested business source, with a loopback synthetic demonstration service; no paid model or production Hub is used.
+- Local Markdown links and HTML image targets were checked. All **10 Mermaid diagrams** passed syntax parsing with Mermaid 11.12.0.
+- New screenshot metadata contains color-space and dimension information, with no location, account or device identifier fields. Visible content was reviewed as synthetic demonstration data. This is a bounded publication check, not a general privacy or security audit.
+- Public-tree checks and Git whitespace checks passed. This update changes documentation and screenshots only, so the business and iOS suites were not repeated; the source CI evidence above remains the applicable baseline.
+
+The gallery demonstrates the actual App UI, not real DSH execution of the displayed tasks. It does not establish physical-device, camera, cellular, haptic or APNs acceptance.
